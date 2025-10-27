@@ -36,6 +36,7 @@ let g:sftp_sync_servers = {
             \         'host': 'myserver.com',
             \         'username': 'mysftpuser',
             \         'password': 's3cret',
+            \         # 'private_key': '/home/myuser/.ssh/id_xxx',
             \     }
             \ }
 ```
@@ -44,6 +45,11 @@ Send the currently open file:
 
 ```
 :SftpSend
+```
+
+Receive the currently open file:
+```
+:SftpRecv
 ```
 
 See `:help sftp-sync` for more details.

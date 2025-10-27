@@ -79,6 +79,11 @@ COMMANDS                                                  *sftp-sync-commands*
     Sends a local file to the server. If {file} isn't passed, sends the
     the file open in the active buffer.
 
+:SftpRecv {file}
+  
+    Downloads a file from the server, overwriting the local file. If {file} isn't passed, this uses
+    the file open in the active buffer.
+
 :SftpReset                                                         *:SftpReset*
 
     Closes any active connection.

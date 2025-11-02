@@ -11,18 +11,17 @@ recommended. It may still work with older releases.
 Install SftpSync using your favorite plugin manager. Using vim-plug:
 
 ```vim
-Plug 'dcampos/nvim-sftp-sync', { 'do': ':UpdateRemotePlugins' }
+Plug 'storchdev/nvim-sftp-sync', { 'do': ':UpdateRemotePlugins' }
 ```
 
-This plugin has an external dependence on the pysftp Python module. You can use
-the `pip` command to install it:
+This plugin has an external dependence on the `pynvim` and `paramiko` Python packages. I recommend using `uv` to create a virtual environment and then adding `vim.g.python3_host_prog = ~/.local/share/nvim/.venv/bin/python`.
 
 ```
-pip install pysftp
+cd ~/.local/share/nvim
+uv venv
+source .venv/bin/activate
+uv pip install pynvim paramiko
 ```
-
-Being a Python remote plugin, it also requires `pynvim` to be installed and
-working.
 
 ## Usage
 
